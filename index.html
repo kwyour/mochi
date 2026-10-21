@@ -10707,13 +10707,6 @@ font-size: 11.5px; color: var(--muted, #8a8a8a); cursor: pointer; touch-action: 
            静态 DOM：不占 data-anti-scam / data-browser-warn / data-stop-update / data-about-tip 命名空间；
            防倒卖回填（clock.js ensureBar / ensureBulletin）与 5s 看门狗（pwa.js）的插入锚点同批改到本容器
            （查找仍按整个开屏范围，老副本没有本容器时回退 #splash-notice，二传副本照常被兜住）。 -->
-      <div class="splash-mustread" id="splash-mustread">
-        <div class="splash-alert" data-anti-scam="1">
-          <div class="splash-alert-t">免费 · 署名 · 防倒卖</div>
-          <p><strong>欢迎来到属于我们的专属传讯站</strong></p>
-          <p><strong>这里是蒙蒙和彻咪萧咪的讯息秘密基地</strong>这里是我专门为你们两个打造的聊天网站，要好好使用！</p>
-          <p><strong>二改、借鉴小红书 @言序老师和@Milk老师</strong></p>
-        </div>
         <!-- v3.26.x #864（用户 2026-09-19 直派「开屏显眼的地方，顶部需要说明：公告内容已缩减，原公告内容的
              很多使用说明已移动至【设置】的【关于】里」）——夹在品牌卡署名行与停更公告之间＝开屏第一屏第一眼
              可见（同 #793 的放置口径）；静态 DOM（data-about-tip 标记，不占 data-anti-scam / data-browser-warn /
@@ -10747,17 +10740,6 @@ font-size: 11.5px; color: var(--muted, #8a8a8a); cursor: pointer; touch-action: 
              #1482（2026-09-30 作者选定写法 A）：第 9 条「停止发布新版本」改「停止功能更新，此后仅可能发布必要的声明修正」——消除「停更声明 vs 实际仍在发修正批」的自相矛盾；三处落点（本卡/设置→关于/README）同批。
              #1569（2026-10-16 作者直派「免责声明写那么多有的没的，优化一下」并按作者确认的精简草案落地）：12 段精简为 9 段——把原第 3/4/10 条并成一条（自愿使用＋后果自担＋最大范围内免责 ＋ 按现状无担保＋第三方托管 ＋ 可分割性）、把原第 6/8 条并成一条（导入素材版权自负 ＋ 禁止违法用途）、日期行去掉条号独立成段；语义一字未减（逐条要点全在），所有历史锚句保持原样（故 #315c/#1459a~e/#1475c 等哨兵仍绿），仅段数与编号变化；三处站内落点（本卡 / 设置→关于 / 使用说明第 15 章摘要）与 README.md 同批同步。
              ⚠ 本卡与 设置 → 关于 →「隐私与法律」的 #about-disclaimer-sub、使用说明第 15 章「许可与免责」是同一口径的三处站内落点；改文案必须与仓库根 README.md「免责声明（重要）」两源同批同步（README 末条明写「同步展示于站点开屏页」） -->
-        <!-- v3.27.x #319：防未成年人·系统内置字卡锁——默认锁定全部系统预设字卡，输对二级验证密码才放行；
-             纯静态卡骨架，状态文案/按钮/交互由 clock.js 接线渲染（card-lock.js 提供闸门），在线 notice.json 不影响此处。
-             #998（2026-09-21 用户直派「关于2级密码和暗号需要提醒。时间就在开屏第一页的某个目录，不要看第二页」）：
-             解锁提示改成明确指路——答案在第一页公告的章节里（第一页顶部「目录」可逐章翻），并写明不是第二页「进入前 · 作者必读公告」上的两个日期；
-             口径与 clock.js 的锁定态 tip / 解锁弹窗 / 进入后提醒弹窗一致（#1216 起开屏必读摘要块已撤除，指路走第一页目录）-->
-        <div class="splash-alert splash-cardlock" data-anti-scam="l" id="splash-cardlock">
-          <div class="splash-alert-t">防未成年人 · 系统内置字卡已锁定</div>
-          <p id="splash-cardlock-tip">系统内置字卡已全部锁定，这是面向未成年人的保护措施。如你已年满 18 周岁，可输入二级验证密码解锁使用。锁定不影响：聊天情绪字卡、TA 的心情、聊天回应字卡、你自建的字卡均照常可用。密码非常简单，答案就在开屏第一页的章节目录里：点开第一页顶部的「目录」，逐章翻一下就能找到（第一页第一章与第二页最顶那张时间线卡都写着——日期就是字面意思，不是隐藏答案）。解锁用的密码与开屏问答页的「暗号」是同一个（同一串 6 位数字，两个入口都用它）；解开密码请勿二传（不要告诉别人），一旦有人二传，密码就会被重新设置。继续使用即视为你确认已年满 18 周岁。</p>
-          <div class="cardlock-actions" id="splash-cardlock-actions"></div>
-        </div>
-      </div>
       <!-- v3.8.y：顶部品牌区统一装进一个卡片框（logo/标题/署名/原作信息成一个整体，更端庄精致） -->
       <div class="splash-brandcard">
         <div class="splash-logo">
@@ -10772,9 +10754,9 @@ font-size: 11.5px; color: var(--muted, #8a8a8a); cursor: pointer; touch-action: 
         </div>
         <!-- v3.8.y：原作/部署信息——本人原作本人部署，使用网站 + GitHub 库（每条单行完整显示） -->
         <div class="splash-source">
-          <div class="splash-source-line">本人原作，本人部署。</div>
-          <div class="splash-source-line">使用网站为：<span class="splash-source-url">https://ling233330-star.github.io/mochi/</span></div>
-          <div class="splash-source-line">github库为：<span class="splash-source-url">https://github.com/ling233330-star/mochi</span></div>
+          <div class="splash-source-line">欢迎来到蒙蒙和彻咪萧咪的讯息秘密基地</div>
+          <div class="splash-source-line"><span class="splash-source-url">这里是我专门为你们两个打造的聊天网站，要好好使用！</span></div>
+          <div class="splash-source-line"><span class="splash-source-url">二改、借鉴小红书 @言序老师和@Milk老师</span></div>
         </div>
         <!-- v3.26.x #648：原版口径澄清——只有上述使用网站是本人原作、本人部署的原版；其余非作者本人发布的版本＝开放二传二改权限后产生的二传/二改版 -->
         <div class="splash-source">
