@@ -11072,13 +11072,8 @@ font-size: 11.5px; color: var(--muted, #8a8a8a); cursor: pointer; touch-action: 
       <div class="sm-set-hint" style="padding:2px 16px 10px">说明：本站「系统预设字卡」均为自搓字卡（AI 辅助设计），按分类/分组展示，可逐张开启或关闭；想一次停掉一组，用分组标题右侧的「整组停用」开关（没有分组标题的页面在列表上方的「整组停用『本类』」条）——组内每张卡自己的开关一字不改，重新启用即恢复原样。</div>
       <!-- #319 锁状态说明：锁定/解锁两种状态都明示（解锁入口在开屏公告区，此处只读不操作） -->
       <div class="sm-set-hint" id="cc-preset-lock-hint" style="padding:0 16px 10px"></div>
-      <div class="chat-item glass" id="li-default-cards">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9z"/></svg></div>
-        <div class="ci"><div class="n">默认聊天字卡</div><div class="m">日常默认回复字卡（自搓）</div></div>
-        <div class="t" id="dc-lib-count">0</div>
-      </div>
       <!-- v3.35.x：词典独立分类——从默认聊天字卡里单独拎出一个入口，供词典拼字抽句/切词查看与开关 -->
-      <div class="chat-item glass" id="li-dict-cards">
+      <div class="chat-item glass" id="li-dict-cards" style="display: none;">
         <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13a3 3 0 013 3v13H7a3 3 0 01-3-3z"/><path d="M7 8.5h11M7 12.5h7"/></svg></div>
         <div class="ci"><div class="n">聊天默认字卡·词典</div><div class="m">词典拼字 · 语录/词库/常用词</div></div>
         <div class="t" id="dc-dict-count">0</div>
@@ -11087,16 +11082,6 @@ font-size: 11.5px; color: var(--muted, #8a8a8a); cursor: pointer; touch-action: 
         <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9z"/></svg></div>
         <div class="ci"><div class="n">其他互动功能字卡</div><div class="m">各功能触发的系统预设字卡 · 如摸鱼/吃饭/经期等</div></div>
         <div class="t" id="fc-lib-count">0</div>
-      </div>
-      <div class="chat-item glass" id="li-deskcheck">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M8 3.2a9 9 0 108 0"/></svg></div>
-        <div class="ci"><div class="n">联系人跨桌面查岗</div><div class="m">其他桌面的联系人来查岗时 TA 的回应字卡</div></div>
-        <div class="t" id="dk-lib-count">0</div>
-      </div>
-      <div class="chat-item glass" id="li-mood-cards">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.7-9.3-9A5.3 5.3 0 0112 6.4 5.3 5.3 0 0121.3 12c-1.8 4.3-9.3 9-9.3 9z"/></svg></div>
-        <div class="ci"><div class="n">聊天情绪字卡</div><div class="m">按情绪分类的字卡</div></div>
-        <div class="t">209</div>
       </div>
       <div class="chat-item glass" id="li-ta-mood">
         <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.7-9.3-9A5.3 5.3 0 0112 6.4 5.3 5.3 0 0121.3 12c-1.8 4.3-9.3 9-9.3 9z"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M8.5 14.5a4 4 0 007 0"/></svg></div>
