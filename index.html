@@ -11034,7 +11034,7 @@ font-size: 11.5px; color: var(--muted, #8a8a8a); cursor: pointer; touch-action: 
         <!-- 聊天字卡库页（字卡库列表） -->
     <div class="page" id="page-chatcard" hidden>
       <div class="chat-title">字卡库</div>
-      <div class="card-tabs cc-top-tabs">
+      <div class="card-tabs cc-top-tabs" style="justify-content: center;">
         <button class="cc-tab sel" data-ccsect="custom">可自定义字卡</button>
         <button class="cc-tab" data-ccsect="preset" style="display: none;">系统预设字卡</button>
       </div>
@@ -11053,56 +11053,10 @@ font-size: 11.5px; color: var(--muted, #8a8a8a); cursor: pointer; touch-action: 
         <div class="ci"><div class="n">专属字卡</div><div class="m">只有当前桌面绑定的联系人才能使用</div></div>
         <div class="t" id="cc-list-count">0</div>
       </div>
-      <!-- v3.32.x：其他互动功能字卡同公用/专属拆双入口（存储本就双作用域，取池合并） -->
-      <div class="chat-item glass" id="li-fun-cards-public">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9z"/></svg></div>
-        <div class="ci"><div class="n">其他互动功能字卡·公用</div><div class="m">添加的功能字卡 · 每个桌面的联系人都能使用</div></div>
-        <div class="t" id="cc-fun-pub-count">0</div>
-      </div>
-      <div class="chat-item glass" id="li-fun-cards-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.4l6.1-.9z"/></svg></div>
-        <div class="ci"><div class="n">其他互动功能字卡·专属</div><div class="m">添加的功能字卡 · 只有当前桌面的联系人能使用</div></div>
-        <div class="t" id="cc-fun-count">0</div>
-      </div>
-      <div class="chat-item glass" id="li-checkin-cards-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M12 3a9 9 0 000 18"/></svg></div>
-        <div class="ci"><div class="n">寻踪日常·我的添加</div><div class="m">你添加的地点/做的事/说的话</div></div>
-        <div class="t" id="cc-checkin-count-mine">0</div>
-      </div>
       <div class="chat-item glass" id="li-quote-cards-mine">
         <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h11a1 1 0 011 1v16l-6.5-4-6.5 4v-16a1 1 0 011-1z"/></svg></div>
         <div class="ci"><div class="n">今日情话·我的添加</div><div class="m">你添加的桌面每日情话</div></div>
         <div class="t" id="cc-quote-count-mine">0</div>
-      </div>
-      <div class="chat-item glass" id="li-ta-ask-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-        <div class="ci"><div class="n">TA的询问·我的添加</div><div class="m">你添加的开放式提问</div></div>
-        <div class="t" id="cc-ta-ask-count-mine">0</div>
-      </div>
-      <div class="chat-item glass" id="li-ta-choose-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div class="ci"><div class="n">TA的小问题·我的添加</div><div class="m">你添加的选择题</div></div>
-        <div class="t" id="cc-ta-choose-count-mine">0</div>
-      </div>
-      <div class="chat-item glass" id="li-ta-curious-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 000 18"/><circle cx="12" cy="12" r="2"/></svg></div>
-        <div class="ci"><div class="n">TA的好奇·我的添加</div><div class="m">你添加的好奇提问</div></div>
-        <div class="t" id="cc-ta-curious-count-mine">0</div>
-      </div>
-      <div class="chat-item glass" id="li-ta-roast-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.4 5.7.3-4.4 3.6 1.5 5.5-4.6-3.3-4.6 3.3 1.5-5.5-4.4-3.6 5.7-.3z"/></svg></div>
-        <div class="ci"><div class="n">TA的吐槽·我的添加</div><div class="m">你添加的吐槽字卡</div></div>
-        <div class="t" id="cc-ta-roast-count-mine">0</div>
-      </div>
-      <div class="chat-item glass" id="li-ta-checkin-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M12 3a9 9 0 000 18"/></svg></div>
-        <div class="ci"><div class="n">TA的查岗·我的添加</div><div class="m">你添加的查岗问题</div></div>
-        <div class="t" id="cc-ta-checkin-count-mine">0</div>
-      </div>
-      <div class="chat-item glass" id="li-ta-invite-mine">
-        <div class="av"><svg viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 10.5v3M5.5 12h3"/><path d="M15.5 11h.01M18.5 13h.01"/></svg></div>
-        <div class="ci"><div class="n">TA的邀请·我的添加</div><div class="m">你添加的邀请话术</div></div>
-        <div class="t" id="cc-ta-invite-count-mine">0</div>
       </div>
       <!-- v3.34.x：自定义字卡全量导入导出——覆盖下方全部自定义库（聊天字卡双作用域/功能卡/寻踪/情话/TA六类） -->
       <div class="chat-item glass" id="li-cc-full-export">
